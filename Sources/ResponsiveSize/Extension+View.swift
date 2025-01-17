@@ -2,7 +2,7 @@
 //  Extension+View.swift
 //  ResponsiveSize
 //
-//  Created by differenz148 on 09/01/25.
+//  Created by Pooja Sadariwala on 09/01/25.
 //
 
 import SwiftUI
@@ -15,7 +15,7 @@ public extension View {
     func responsiveFontSize(_ baseFontSize: CGFloat) -> some View {
         self.font(.system(size: ResponsiveHelper.shared.scaledFontSize(baseFontSize)))
     }
-        
+    
     /**
      Responsive Font Size with Dynamic Font
      */
@@ -146,4 +146,5 @@ public extension View {
     func responsiveSpacing(_ baseSpacing: CGFloat) -> some View {
         self.padding(.all, ResponsiveHelper.shared.scaleDimension(baseSpacing))
     }
+    
 }

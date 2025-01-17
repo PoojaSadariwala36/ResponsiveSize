@@ -2,7 +2,7 @@
 //  ResponsiveHelper.swift
 //  ResponsiveSize
 //
-//  Created by differenz148 on 09/01/25.
+//  Created by Pooja Sadariwala on 09/01/25.
 //
 
 import SwiftUI

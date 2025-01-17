@@ -3,7 +3,7 @@
 
 import SwiftUI
 
-struct ResponsiveSize: View {
+struct ResponsiveSizeExample: View {
     var body: some View {
         ScrollView {
             VStack(spacing: ResponsiveHelper.shared.scaleDimension(20)) {
@@ -77,6 +77,7 @@ struct ResponsiveSize: View {
                 }
                 .padding(20)
                 .background(Color.yellow.opacity(0.2))
+                
             }
         }
         .background(Color.gray.opacity(0.1))
