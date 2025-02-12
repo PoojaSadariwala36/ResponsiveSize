@@ -9,18 +9,20 @@ let package = Package(
         .iOS(.v13),
     ],
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "ResponsiveSize",
-            targets: ["ResponsiveSize"]),
+            targets: ["ResponsiveSize"]
+        ),
     ],
-    dependencies: [
-    ],
+    dependencies: [],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
         .target(
-            name: "ResponsiveSize"),
-
+            name: "ResponsiveSize",
+            cSettings: [
+                .unsafeFlags(["-target", "x86_64-apple-ios-simulator"])
+            ], swiftSettings: [
+                .define("SIMULATOR_ARCHS", .when(platforms: [.iOS], configuration: .debug))
+            ]
+        ),
     ]
 )
