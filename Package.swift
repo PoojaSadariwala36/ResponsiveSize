@@ -6,22 +6,19 @@ import PackageDescription
 let package = Package(
     name: "ResponsiveSize",
     platforms: [
-        .iOS(.v13),
+        .iOS(.v13) // Ensure compatibility with your project
     ],
     products: [
         .library(
             name: "ResponsiveSize",
-            targets: ["ResponsiveSize"]
-        ),
+            targets: ["ResponsiveSize"]),
     ],
-    dependencies: [],
     targets: [
         .target(
             name: "ResponsiveSize",
-            cSettings: [
-                .unsafeFlags(["-target", "x86_64-apple-ios-simulator"])
-            ], swiftSettings: [
-                .define("SIMULATOR_ARCHS", .when(platforms: [.iOS], configuration: .debug))
+            dependencies: [],
+            swiftSettings: [
+                .unsafeFlags(["-target", "x86_64-apple-ios-simulator", "-target", "arm64-apple-ios-simulator"])
             ]
         ),
     ]
