@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
     name: "ResponsiveSize",
     platforms: [
-        .iOS(.v13) // Ensure compatibility with your project
+        .iOS(.v13) // Ensure compatibility
     ],
     products: [
         .library(
@@ -18,7 +18,7 @@ let package = Package(
             name: "ResponsiveSize",
             dependencies: [],
             swiftSettings: [
-                .unsafeFlags(["-target", "x86_64-apple-ios-simulator", "-target", "arm64-apple-ios-simulator"])
+                .unsafeFlags(["-target", "arm64-apple-ios-simulator"]) // ✅ Only build for arm64
             ]
         ),
     ]
